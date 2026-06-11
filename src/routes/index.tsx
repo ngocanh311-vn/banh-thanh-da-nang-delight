@@ -23,6 +23,9 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
+const SHOPEEFOOD_URL = "https://shopeefood.vn/u/H237mDM";
+const GRABFOOD_URL = "https://food.grab.com/vn/vi/restaurant/online-delivery/5-C6UUJ24WCJUBG2?sourceID=20240813_095504_B70CCB33720843FBAA241A6E90DC6A9C_MEXMPS";
+
 const HOTLINES = [
   { num: "0919.644.625", tel: "0919644625" },
   { num: "0905.142.512", tel: "0905142512" },
@@ -132,8 +135,11 @@ function Hero() {
             </div>
           </div>
           <div className="absolute -top-5 -right-3 bg-card border border-border rounded-2xl px-4 py-3 shadow-warm hidden sm:block">
-            <div className="text-xs text-muted-foreground">Có mặt trên</div>
-            <div className="font-semibold text-sm">ShopeeFood · GrabFood</div>
+            <div className="text-xs text-muted-foreground mb-1.5">Đặt nhanh qua</div>
+            <div className="flex flex-col gap-1.5 text-sm font-semibold">
+              <a href={SHOPEEFOOD_URL} target="_blank" rel="noopener noreferrer" className="text-[#ee4d2d] hover:underline">ShopeeFood →</a>
+              <a href={GRABFOOD_URL} target="_blank" rel="noopener noreferrer" className="text-[#00b14f] hover:underline">GrabFood →</a>
+            </div>
           </div>
         </div>
       </div>
@@ -392,9 +398,17 @@ function Contact() {
                 </a>
               ))}
             </div>
-            <div className="mt-8 pt-6 border-t border-primary-foreground/20 text-sm space-y-2 opacity-95">
+            <div className="mt-8 pt-6 border-t border-primary-foreground/20 text-sm space-y-3 opacity-95">
               <div className="flex items-start gap-2"><PinIcon className="size-4 mt-0.5 shrink-0" /> K25/5 Lý Thường Kiệt, Hải Châu, Đà Nẵng</div>
-              <div className="flex items-start gap-2"><TruckIcon className="size-4 mt-0.5 shrink-0" /> Giao hàng tận nơi · ShopeeFood · GrabFood</div>
+              <div className="flex items-start gap-2"><TruckIcon className="size-4 mt-0.5 shrink-0" /> Giao hàng tận nơi qua các ứng dụng:</div>
+              <div className="flex flex-wrap gap-2 pl-6">
+                <a href={SHOPEEFOOD_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-full bg-primary-foreground text-primary px-4 py-2 text-xs font-semibold hover:opacity-90 transition">
+                  🛵 ShopeeFood
+                </a>
+                <a href={GRABFOOD_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-full bg-primary-foreground text-primary px-4 py-2 text-xs font-semibold hover:opacity-90 transition">
+                  🛵 GrabFood
+                </a>
+              </div>
             </div>
           </div>
 
@@ -471,7 +485,8 @@ function Footer() {
           <ul className="space-y-2 text-sm">
             <li><a target="_blank" rel="noopener noreferrer" className="hover:text-primary flex items-center gap-2" href="https://www.facebook.com/tiembanhthanh"><FbIcon className="size-4" /> tiệm bánh THANH</a></li>
             <li><a target="_blank" rel="noopener noreferrer" className="hover:text-primary flex items-center gap-2" href="https://www.tiktok.com/@tiem_banh_thanh"><TtIcon className="size-4" /> @tiem_banh_thanh</a></li>
-            <li className="opacity-70">ShopeeFood · GrabFood</li>
+            <li><a target="_blank" rel="noopener noreferrer" className="hover:text-primary" href={SHOPEEFOOD_URL}>🛵 ShopeeFood</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" className="hover:text-primary" href={GRABFOOD_URL}>🛵 GrabFood</a></li>
           </ul>
         </div>
       </div>

@@ -135,8 +135,11 @@ function Hero() {
             </div>
           </div>
           <div className="absolute -top-5 -right-3 bg-card border border-border rounded-2xl px-4 py-3 shadow-warm hidden sm:block">
-            <div className="text-xs text-muted-foreground">Có mặt trên</div>
-            <div className="font-semibold text-sm">ShopeeFood · GrabFood</div>
+            <div className="text-xs text-muted-foreground mb-1.5">Đặt nhanh qua</div>
+            <div className="flex flex-col gap-1.5 text-sm font-semibold">
+              <a href={SHOPEEFOOD_URL} target="_blank" rel="noopener noreferrer" className="text-[#ee4d2d] hover:underline">ShopeeFood →</a>
+              <a href={GRABFOOD_URL} target="_blank" rel="noopener noreferrer" className="text-[#00b14f] hover:underline">GrabFood →</a>
+            </div>
           </div>
         </div>
       </div>

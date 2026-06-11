@@ -205,10 +205,10 @@ const PRODUCTS: Product[] = [
   {
     id: "bo-kho-soi",
     name: "Bò khô sợi sả ớt sạch",
-    tagline: "Hũ 250g · Bò Khô Sạch",
+    tagline: "Hũ 500g · Bò Khô Sạch",
     desc: "Sợi bò mềm dai, thấm vị sả ớt đặc trưng. Cam kết 100% bò tươi nguyên chất – không pha thịt heo, không phẩm màu, không chất bảo quản.",
     img: boKhoSoi.url,
-    badge: "Hũ 250g",
+    badge: "Hũ 500g",
     meta: ["100% bò tươi", "Không pha thịt heo", "Không phẩm màu"],
   },
   {

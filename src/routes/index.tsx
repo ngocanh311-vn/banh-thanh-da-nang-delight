@@ -398,9 +398,17 @@ function Contact() {
                 </a>
               ))}
             </div>
-            <div className="mt-8 pt-6 border-t border-primary-foreground/20 text-sm space-y-2 opacity-95">
+            <div className="mt-8 pt-6 border-t border-primary-foreground/20 text-sm space-y-3 opacity-95">
               <div className="flex items-start gap-2"><PinIcon className="size-4 mt-0.5 shrink-0" /> K25/5 Lý Thường Kiệt, Hải Châu, Đà Nẵng</div>
-              <div className="flex items-start gap-2"><TruckIcon className="size-4 mt-0.5 shrink-0" /> Giao hàng tận nơi · ShopeeFood · GrabFood</div>
+              <div className="flex items-start gap-2"><TruckIcon className="size-4 mt-0.5 shrink-0" /> Giao hàng tận nơi qua các ứng dụng:</div>
+              <div className="flex flex-wrap gap-2 pl-6">
+                <a href={SHOPEEFOOD_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-full bg-primary-foreground text-primary px-4 py-2 text-xs font-semibold hover:opacity-90 transition">
+                  🛵 ShopeeFood
+                </a>
+                <a href={GRABFOOD_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-full bg-primary-foreground text-primary px-4 py-2 text-xs font-semibold hover:opacity-90 transition">
+                  🛵 GrabFood
+                </a>
+              </div>
             </div>
           </div>
 

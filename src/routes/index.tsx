@@ -485,7 +485,8 @@ function Footer() {
           <ul className="space-y-2 text-sm">
             <li><a target="_blank" rel="noopener noreferrer" className="hover:text-primary flex items-center gap-2" href="https://www.facebook.com/tiembanhthanh"><FbIcon className="size-4" /> tiệm bánh THANH</a></li>
             <li><a target="_blank" rel="noopener noreferrer" className="hover:text-primary flex items-center gap-2" href="https://www.tiktok.com/@tiem_banh_thanh"><TtIcon className="size-4" /> @tiem_banh_thanh</a></li>
-            <li className="opacity-70">ShopeeFood · GrabFood</li>
+            <li><a target="_blank" rel="noopener noreferrer" className="hover:text-primary" href={SHOPEEFOOD_URL}>🛵 ShopeeFood</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" className="hover:text-primary" href={GRABFOOD_URL}>🛵 GrabFood</a></li>
           </ul>
         </div>
       </div>

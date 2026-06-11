@@ -23,6 +23,9 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
+const SHOPEEFOOD_URL = "https://shopeefood.vn/u/H237mDM";
+const GRABFOOD_URL = "https://food.grab.com/vn/vi/restaurant/online-delivery/5-C6UUJ24WCJUBG2?sourceID=20240813_095504_B70CCB33720843FBAA241A6E90DC6A9C_MEXMPS";
+
 const HOTLINES = [
   { num: "0919.644.625", tel: "0919644625" },
   { num: "0905.142.512", tel: "0905142512" },

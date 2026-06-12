@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Home } from "@/lib/site-content";
 import banhCamHop from "@/assets/banh-cam-hop.asset.json";
+import banhCam2 from "@/assets/banh-cam-2.asset.json";
 
 const SITE = "https://banh-thanh-da-nang-delight.lovable.app";
 const OG_IMAGE = `${SITE}${banhCamHop.url}`;
+const HERO_IMAGE = banhCam2.url;
 
 const TITLE = "Tiệm Bánh Thanh – 岘港特色烘焙店 · 香橙海绵蛋糕与伴手礼";
 const DESC = "岘港本地烘焙店 Tiệm Bánh Thanh – 松软香甜的香橙海绵蛋糕、虾肉糯米糍 (Bánh ít)、岘港牛肉干。精美礼盒包装，岘港市区送货上门。地址：K25/5 Lý Thường Kiệt, Hải Châu, 岘港。";
@@ -36,6 +38,7 @@ export const Route = createFileRoute("/zh")({
       { rel: "alternate", hrefLang: "ko", href: `${SITE}/ko` },
       { rel: "alternate", hrefLang: "zh", href: `${SITE}/zh` },
       { rel: "alternate", hrefLang: "x-default", href: `${SITE}/` },
+      { rel: "preload", as: "image", href: HERO_IMAGE, fetchPriority: "high" },
     ],
   }),
   component: () => <Home lang="en" />,

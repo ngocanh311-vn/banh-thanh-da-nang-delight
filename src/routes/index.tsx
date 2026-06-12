@@ -509,7 +509,7 @@ function Footer() {
           <div className="rounded-xl overflow-hidden border border-background/10">
             <iframe
               title="Bản đồ Tiệm Bánh Thanh"
-              src="https://www.google.com/maps?q=K25%2F5+L%C3%BD+Th%C6%B0%E1%BB%9Dng+Ki%E1%BB%87t%2C+H%E1%BA%A3i+Ch%C3%A2u%2C+%C4%90%C3%A0+N%E1%B5%B5ng&output=embed"
+              src="https://www.google.com/maps?q=K25%2F5+L%C3%BD+Th%C6%B0%E1%BB%9Dng+Ki%E1%BB%87t%2C+H%E1%BA%A3i+Ch%C3%A2u%2C+%C4%90%C3%A0+N%E1%BA%B5ng&output=embed"
               width="100%"
               height="280"
               style={{ border: 0 }}

@@ -425,6 +425,30 @@ function Contact() {
               <div className="font-semibold mb-1">Giờ phục vụ</div>
               <div className="text-muted-foreground">Mở cửa hằng ngày · Đặt trước 1–2 tiếng cho đơn lớn để tiệm chuẩn bị tốt nhất.</div>
             </div>
+            <div className="mt-4">
+              <div className="flex items-center justify-between mb-2">
+                <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Bản đồ tiệm</div>
+                <a
+                  href="https://maps.app.goo.gl/Yuw4kYQaMReYriFo7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-primary hover:underline"
+                >
+                  Mở Google Maps →
+                </a>
+              </div>
+              <div className="rounded-2xl overflow-hidden border border-border">
+                <iframe
+                  title="Bản đồ Tiệm Bánh Thanh"
+                  src="https://www.google.com/maps?q=K25%2F5+L%C3%BD+Th%C6%B0%E1%BB%9Dng+Ki%E1%BB%87t%2C+H%E1%BA%A3i+Ch%C3%A2u%2C+%C4%90%C3%A0+N%E1%BA%B5ng&output=embed"
+                  width="100%"
+                  height="180"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -488,36 +512,6 @@ function Footer() {
             <li><a target="_blank" rel="noopener noreferrer" className="hover:text-primary" href={SHOPEEFOOD_URL}>🛵 ShopeeFood</a></li>
             <li><a target="_blank" rel="noopener noreferrer" className="hover:text-primary" href={GRABFOOD_URL}>🛵 GrabFood</a></li>
           </ul>
-        </div>
-      </div>
-      <div className="border-t border-background/10">
-        <div className="mx-auto max-w-6xl px-5 py-8">
-          <div className="flex items-center justify-between gap-4 mb-3 flex-wrap">
-            <div>
-              <div className="text-xs uppercase tracking-wider opacity-60">Bản đồ</div>
-              <div className="text-sm font-semibold mt-1">Tiệm Bánh Thanh – K25/5 Lý Thường Kiệt, Đà Nẵng</div>
-            </div>
-            <a
-              href="https://maps.app.goo.gl/Yuw4kYQaMReYriFo7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-primary hover:underline"
-            >
-              Mở trong Google Maps →
-            </a>
-          </div>
-          <div className="rounded-xl overflow-hidden border border-background/10">
-            <iframe
-              title="Bản đồ Tiệm Bánh Thanh"
-              src="https://www.google.com/maps?q=K25%2F5+L%C3%BD+Th%C6%B0%E1%BB%9Dng+Ki%E1%BB%87t%2C+H%E1%BA%A3i+Ch%C3%A2u%2C+%C4%90%C3%A0+N%E1%BA%B5ng&output=embed"
-              width="100%"
-              height="280"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
-          </div>
         </div>
       </div>
       <div className="border-t border-background/10">

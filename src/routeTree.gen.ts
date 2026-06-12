@@ -9,13 +9,25 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ZhRouteImport } from './routes/zh'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as KoRouteImport } from './routes/ko'
 import { Route as EnRouteImport } from './routes/en'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ZhRoute = ZhRouteImport.update({
+  id: '/zh',
+  path: '/zh',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoRoute = KoRouteImport.update({
+  id: '/ko',
+  path: '/ko',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EnRoute = EnRouteImport.update({
@@ -32,40 +44,62 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/en': typeof EnRoute
+  '/ko': typeof KoRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/zh': typeof ZhRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/en': typeof EnRoute
+  '/ko': typeof KoRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/zh': typeof ZhRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/en': typeof EnRoute
+  '/ko': typeof KoRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/zh': typeof ZhRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/en' | '/sitemap.xml'
+  fullPaths: '/' | '/en' | '/ko' | '/sitemap.xml' | '/zh'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/en' | '/sitemap.xml'
-  id: '__root__' | '/' | '/en' | '/sitemap.xml'
+  to: '/' | '/en' | '/ko' | '/sitemap.xml' | '/zh'
+  id: '__root__' | '/' | '/en' | '/ko' | '/sitemap.xml' | '/zh'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EnRoute: typeof EnRoute
+  KoRoute: typeof KoRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ZhRoute: typeof ZhRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/zh': {
+      id: '/zh'
+      path: '/zh'
+      fullPath: '/zh'
+      preLoaderRoute: typeof ZhRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko': {
+      id: '/ko'
+      path: '/ko'
+      fullPath: '/ko'
+      preLoaderRoute: typeof KoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/en': {
@@ -88,7 +122,9 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EnRoute: EnRoute,
+  KoRoute: KoRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ZhRoute: ZhRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

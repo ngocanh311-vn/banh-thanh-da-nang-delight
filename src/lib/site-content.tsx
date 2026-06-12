@@ -405,6 +405,10 @@ function Hero({ lang, t }: { lang: Lang; t: Tt }) {
             alt={lang === "vi" ? "Bánh bông lan cam Tiệm Bánh Thanh" : "Orange sponge cake from Tiệm Bánh Thanh"}
             className="relative rounded-[2.5rem] aspect-square object-cover w-full shadow-warm border-4 border-card"
             loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            width={800}
+            height={800}
           />
           <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-2xl p-4 shadow-warm flex items-center gap-3 max-w-[220px]">
             <span className="grid place-items-center size-10 rounded-full bg-primary/15 text-primary">🥮</span>

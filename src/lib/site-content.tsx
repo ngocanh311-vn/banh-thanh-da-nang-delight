@@ -517,8 +517,8 @@ function About({ t }: { t: Tt }) {
     <section id="gioi-thieu" className="py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5 grid md:grid-cols-2 gap-12 items-center">
         <div className="relative">
-          <img src={banhCam3.url} alt="Tiệm Bánh Thanh" className="rounded-3xl aspect-[4/5] object-cover w-full shadow-warm" loading="lazy" />
-          <img src={banhCam1.url} alt="" className="hidden sm:block absolute -bottom-8 -right-8 w-1/2 aspect-square object-cover rounded-2xl border-4 border-background shadow-warm" loading="lazy" />
+          <img src={banhCam3.url} alt="Tiệm Bánh Thanh" width={640} height={800} decoding="async" className="rounded-3xl aspect-[4/5] object-cover w-full shadow-warm" loading="lazy" />
+          <img src={banhCam1.url} alt="" width={400} height={400} decoding="async" className="hidden sm:block absolute -bottom-8 -right-8 w-1/2 aspect-square object-cover rounded-2xl border-4 border-background shadow-warm" loading="lazy" />
         </div>
         <div>
           <SectionHeader align="left" eyebrow={t.about.eyebrow} title={t.about.title} />

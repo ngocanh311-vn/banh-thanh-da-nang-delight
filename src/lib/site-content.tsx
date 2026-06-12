@@ -22,7 +22,36 @@ const HOTLINES = [
 /* ============================================================
    Translation dictionary
    ============================================================ */
-export const T = {
+type Product = { id: string; name: string; tagline: string; desc: string; img: string; badge?: string; meta: string[] };
+type Translation = {
+  nav: { products: string; promise: string; about: string; contact: string };
+  ctaOrder: string;
+  brandTagline: string;
+  hero: {
+    eyebrow: string; titleA: string; titleScript: string; titleB: string; desc: string;
+    seeProducts: string; floatTitle: string; floatSub: string; quickOrder: string;
+    stats: { v: string; l: string }[];
+  };
+  trust: { k: string; v: string }[];
+  products: { eyebrow: string; title: string; desc: string; orderCta: string; bestSeller: string };
+  productList: Product[];
+  quality: {
+    eyebrow: string; title: string; desc: string; noteTitle: string; note: string;
+    items: { t: string; d: string }[];
+  };
+  about: { eyebrow: string; title: string; p1: string; p2: string };
+  contact: {
+    eyebrow: string; title: string; desc: string; hotline: string; address: string;
+    deliveryLine: string; connectTitle: string; connectDesc: string;
+    hoursTitle: string; hoursDesc: string; mapTitle: string; mapOpen: string;
+  };
+  footer: {
+    tagline: string; contact: string; follow: string;
+    address1: string; address2: string; rights: string; slogan: string;
+  };
+};
+
+export const T: Record<Lang, Translation> = {
   vi: {
     nav: { products: "Sản phẩm", promise: "Cam kết", about: "Giới thiệu", contact: "Liên hệ" },
     ctaOrder: "Đặt bánh",

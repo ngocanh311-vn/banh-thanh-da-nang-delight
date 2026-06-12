@@ -365,6 +365,18 @@ function Hero({ lang, t }: { lang: Lang; t: Tt }) {
             <br />{t.hero.titleB}
           </h1>
           <p className="mt-5 text-lg text-muted-foreground max-w-xl text-balance">{t.hero.desc}</p>
+          {lang === "en" && (
+            <div className="mt-4 space-y-1.5 max-w-xl text-sm text-muted-foreground/90" aria-label="Multilingual introduction">
+              <p lang="ko">
+                <span className="font-semibold text-foreground">🇰🇷 한국어:</span>{" "}
+                다낭 현지 베이커리 <strong>Tiệm Bánh Thanh</strong> – 부드러운 오렌지 스폰지 케이크, 새우·돼지고기 바인잇, 깨끗한 다낭 소고기 육포. 선물용 고급 포장, 다낭 시내 배달 가능.
+              </p>
+              <p lang="zh">
+                <span className="font-semibold text-foreground">🇨🇳 中文:</span>{" "}
+                岘港特色烘焙店 <strong>Tiệm Bánh Thanh</strong> – 香橙海绵蛋糕松软香甜，虾肉糯米糍 (Bánh ít)，岘港牛肉干。精美礼盒包装，岘港市区送货上门。
+              </p>
+            </div>
+          )}
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#san-pham" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-semibold hover:bg-primary/90 transition shadow-warm">
               {t.hero.seeProducts} <ArrowIcon className="size-4" />

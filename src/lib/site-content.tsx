@@ -276,7 +276,7 @@ export const T: Record<Lang, Translation> = {
       slogan: "Da Nang specialty · The perfect gift",
     },
   },
-} as const;
+};
 
 /* ============================================================
    Components

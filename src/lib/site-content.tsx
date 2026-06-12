@@ -298,7 +298,7 @@ export function Home({ lang }: { lang: Lang }) {
   );
 }
 
-type Tt = typeof T["vi"];
+type Tt = Translation;
 
 function LangSwitcher({ lang }: { lang: Lang }) {
   const base = "px-2.5 py-1 text-xs font-bold uppercase tracking-wider transition";

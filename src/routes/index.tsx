@@ -38,6 +38,7 @@ export const Route = createFileRoute("/")({
       { rel: "alternate", hrefLang: "ko", href: `${SITE}/ko` },
       { rel: "alternate", hrefLang: "zh", href: `${SITE}/zh` },
       { rel: "alternate", hrefLang: "x-default", href: `${SITE}/` },
+      { rel: "preload", as: "image", href: HERO_IMAGE, fetchPriority: "high" },
     ],
     scripts: [
       {

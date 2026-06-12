@@ -457,7 +457,7 @@ function Products({ lang, t }: { lang: Lang; t: Tt }) {
           {t.productList.map((p) => (
             <article key={p.id} className="group bg-card border border-border rounded-3xl overflow-hidden hover:shadow-warm transition-all duration-500 hover:-translate-y-1">
               <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                <img src={p.img} alt={p.name} loading="lazy" className="size-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={p.img} alt={p.name} loading="lazy" decoding="async" width={800} height={600} className="size-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 {p.badge && (
                   <span className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full shadow-warm">
                     {p.badge}

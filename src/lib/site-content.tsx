@@ -555,7 +555,7 @@ function Gallery() {
       <div className="mx-auto max-w-6xl px-5">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
           {imgs.map((src, i) => (
-            <img key={i} src={src} alt="" loading="lazy" className={`rounded-2xl object-cover aspect-square hover:scale-105 transition-transform duration-500 ${i === 0 ? "md:col-span-2 md:row-span-2 md:aspect-auto" : ""}`} />
+            <img key={i} src={src} alt="" loading="lazy" decoding="async" width={500} height={500} className={`rounded-2xl object-cover aspect-square hover:scale-105 transition-transform duration-500 ${i === 0 ? "md:col-span-2 md:row-span-2 md:aspect-auto" : ""}`} />
           ))}
         </div>
       </div>

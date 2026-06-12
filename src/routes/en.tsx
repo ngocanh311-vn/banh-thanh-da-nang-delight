@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Home } from "@/lib/site-content";
 import banhCamHop from "@/assets/banh-cam-hop.asset.json";
+import banhCam2 from "@/assets/banh-cam-2.asset.json";
 
 const SITE = "https://banh-thanh-da-nang-delight.lovable.app";
 const OG_IMAGE = `${SITE}${banhCamHop.url}`;
+const HERO_IMAGE = banhCam2.url;
 
 const TITLE = "Tiệm Bánh Thanh – Da Nang Specialty Bakery · Orange Sponge Cake & Gifts";
 const DESC = "Soft, fluffy orange sponge cake, shrimp-and-pork bánh ít, and clean dried beef from Da Nang. Elegant gift packaging, on-demand delivery – K25/5 Ly Thuong Kiet, Hai Chau, Da Nang.";
@@ -36,6 +38,7 @@ export const Route = createFileRoute("/en")({
       { rel: "alternate", hrefLang: "ko", href: `${SITE}/ko` },
       { rel: "alternate", hrefLang: "zh", href: `${SITE}/zh` },
       { rel: "alternate", hrefLang: "x-default", href: `${SITE}/` },
+      { rel: "preload", as: "image", href: HERO_IMAGE, fetchPriority: "high" },
     ],
   }),
   component: () => <Home lang="en" />,

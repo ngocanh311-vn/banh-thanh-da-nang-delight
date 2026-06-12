@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import banhCamHop from "@/assets/banh-cam-hop.asset.json";
+import banhCam2 from "@/assets/banh-cam-2.asset.json";
 import { Home } from "@/lib/site-content";
 
 const SITE = "https://banh-thanh-da-nang-delight.lovable.app";
 const OG_IMAGE = `${SITE}${banhCamHop.url}`;
+const HERO_IMAGE = banhCam2.url;
 
 const TITLE = "Tiệm Bánh Thanh – Bánh bông lan cam · Đặc sản Đà Nẵng làm quà";
 const DESC = "Bánh bông lan cam mềm xốp thơm hương cam, bánh ít nhân tôm thịt, bò khô sạch Đà Nẵng. Giao hàng tận nơi – K25/5 Lý Thường Kiệt, Hải Châu, Đà Nẵng.";
@@ -36,6 +38,7 @@ export const Route = createFileRoute("/")({
       { rel: "alternate", hrefLang: "ko", href: `${SITE}/ko` },
       { rel: "alternate", hrefLang: "zh", href: `${SITE}/zh` },
       { rel: "alternate", hrefLang: "x-default", href: `${SITE}/` },
+      { rel: "preload", as: "image", href: HERO_IMAGE, fetchPriority: "high" },
     ],
     scripts: [
       {

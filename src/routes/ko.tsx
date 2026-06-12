@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Home } from "@/lib/site-content";
 import banhCamHop from "@/assets/banh-cam-hop.asset.json";
+import banhCam2 from "@/assets/banh-cam-2.asset.json";
 
 const SITE = "https://banh-thanh-da-nang-delight.lovable.app";
 const OG_IMAGE = `${SITE}${banhCamHop.url}`;
+const HERO_IMAGE = banhCam2.url;
 
 const TITLE = "Tiệm Bánh Thanh – 다낭 베이커리 · 오렌지 스폰지 케이크 & 기념품";
 const DESC = "다낭 현지 베이커리 Tiệm Bánh Thanh – 부드러운 오렌지 스폰지 케이크, 새우·돼지고기 바인잇(Bánh ít), 깨끗한 다낭 소고기 육포. 선물용 고급 포장, 다낭 시내 배달. 주소: K25/5 Lý Thường Kiệt, Hải Châu.";
@@ -36,6 +38,7 @@ export const Route = createFileRoute("/ko")({
       { rel: "alternate", hrefLang: "ko", href: `${SITE}/ko` },
       { rel: "alternate", hrefLang: "zh", href: `${SITE}/zh` },
       { rel: "alternate", hrefLang: "x-default", href: `${SITE}/` },
+      { rel: "preload", as: "image", href: HERO_IMAGE, fetchPriority: "high" },
     ],
   }),
   component: () => <Home lang="en" />,

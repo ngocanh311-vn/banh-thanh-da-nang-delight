@@ -405,6 +405,10 @@ function Hero({ lang, t }: { lang: Lang; t: Tt }) {
             alt={lang === "vi" ? "Bánh bông lan cam Tiệm Bánh Thanh" : "Orange sponge cake from Tiệm Bánh Thanh"}
             className="relative rounded-[2.5rem] aspect-square object-cover w-full shadow-warm border-4 border-card"
             loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            width={800}
+            height={800}
           />
           <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-2xl p-4 shadow-warm flex items-center gap-3 max-w-[220px]">
             <span className="grid place-items-center size-10 rounded-full bg-primary/15 text-primary">🥮</span>
@@ -453,7 +457,7 @@ function Products({ lang, t }: { lang: Lang; t: Tt }) {
           {t.productList.map((p) => (
             <article key={p.id} className="group bg-card border border-border rounded-3xl overflow-hidden hover:shadow-warm transition-all duration-500 hover:-translate-y-1">
               <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                <img src={p.img} alt={p.name} loading="lazy" className="size-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={p.img} alt={p.name} loading="lazy" decoding="async" width={800} height={600} className="size-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 {p.badge && (
                   <span className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full shadow-warm">
                     {p.badge}
@@ -513,8 +517,8 @@ function About({ t }: { t: Tt }) {
     <section id="gioi-thieu" className="py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5 grid md:grid-cols-2 gap-12 items-center">
         <div className="relative">
-          <img src={banhCam3.url} alt="Tiệm Bánh Thanh" className="rounded-3xl aspect-[4/5] object-cover w-full shadow-warm" loading="lazy" />
-          <img src={banhCam1.url} alt="" className="hidden sm:block absolute -bottom-8 -right-8 w-1/2 aspect-square object-cover rounded-2xl border-4 border-background shadow-warm" loading="lazy" />
+          <img src={banhCam3.url} alt="Tiệm Bánh Thanh" width={640} height={800} decoding="async" className="rounded-3xl aspect-[4/5] object-cover w-full shadow-warm" loading="lazy" />
+          <img src={banhCam1.url} alt="" width={400} height={400} decoding="async" className="hidden sm:block absolute -bottom-8 -right-8 w-1/2 aspect-square object-cover rounded-2xl border-4 border-background shadow-warm" loading="lazy" />
         </div>
         <div>
           <SectionHeader align="left" eyebrow={t.about.eyebrow} title={t.about.title} />
@@ -551,7 +555,7 @@ function Gallery() {
       <div className="mx-auto max-w-6xl px-5">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
           {imgs.map((src, i) => (
-            <img key={i} src={src} alt="" loading="lazy" className={`rounded-2xl object-cover aspect-square hover:scale-105 transition-transform duration-500 ${i === 0 ? "md:col-span-2 md:row-span-2 md:aspect-auto" : ""}`} />
+            <img key={i} src={src} alt="" loading="lazy" decoding="async" width={500} height={500} className={`rounded-2xl object-cover aspect-square hover:scale-105 transition-transform duration-500 ${i === 0 ? "md:col-span-2 md:row-span-2 md:aspect-auto" : ""}`} />
           ))}
         </div>
       </div>

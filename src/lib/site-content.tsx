@@ -150,7 +150,7 @@ export const T: Record<Lang, Translation> = {
       connectTitle: "Kết nối với chúng tôi",
       connectDesc: "Theo dõi để cập nhật mẻ bánh mới nhất và ưu đãi từ tiệm.",
       hoursTitle: "Giờ phục vụ",
-      hoursDesc: "Mở cửa hằng ngày · Đặt trước 1–2 tiếng cho đơn lớn để tiệm chuẩn bị tốt nhất.",
+      hoursDesc: "Mở cửa hằng ngày \u00B7 \u0110\u1EB7t tr\u01B0\u1EDBc 1/2\u20131 ng\u00E0y cho \u0111\u01A1n l\u1EDBn \u0111\u1EC3 ti\u1EC7m chu\u1EA9n b\u1ECB t\u1ED1t nh\u1EA5t.",
       mapTitle: "Bản đồ tiệm",
       mapOpen: "Mở Google Maps →",
     },

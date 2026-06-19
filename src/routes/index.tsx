@@ -3,25 +3,36 @@ import banhCamHop from "@/assets/banh-cam-hop.asset.json";
 import banhCam2 from "@/assets/banh-cam-2.asset.json";
 import { Home } from "@/lib/site-content";
 
-const SITE = "https://banh-thanh-da-nang-delight.lovable.app";
+const SITE =
+  typeof window !== "undefined"
+    ? window.location.origin
+    : import.meta.env.VITE_SITE_URL || "https://banh-thanh-da-nang-delight.lovable.app";
 const OG_IMAGE = `${SITE}${banhCamHop.url}`;
 const HERO_IMAGE = banhCam2.url;
 
 const TITLE = "Tiệm Bánh Thanh – Bánh bông lan cam · Đặc sản Đà Nẵng làm quà";
-const DESC = "Bánh bông lan cam mềm xốp thơm hương cam, bánh ít nhân tôm thịt, bò khô sạch Đà Nẵng. Giao hàng tận nơi – K25/5 Lý Thường Kiệt, Hải Châu, Đà Nẵng.";
+const DESC =
+  "Bánh bông lan cam mềm xốp thơm hương cam, bánh ít nhân tôm thịt, bò khô sạch Đà Nẵng. Giao hàng tận nơi – K25/5 Lý Thường Kiệt, Hải Châu, Đà Nẵng.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: TITLE },
       { name: "description", content: DESC },
-      { name: "keywords", content: "tiệm bánh Thanh, bánh bông lan cam Đà Nẵng, đặc sản Đà Nẵng làm quà, bánh ít nhân tôm thịt, bò khô Đà Nẵng, đặt bánh Đà Nẵng" },
+      {
+        name: "keywords",
+        content:
+          "tiệm bánh Thanh, bánh bông lan cam Đà Nẵng, đặc sản Đà Nẵng làm quà, bánh ít nhân tôm thịt, bò khô Đà Nẵng, đặt bánh Đà Nẵng",
+      },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${SITE}/` },
       { property: "og:image", content: OG_IMAGE },
-      { property: "og:image:alt", content: "Hộp bánh bông lan cam Tiệm Bánh Thanh – đặc sản Đà Nẵng" },
+      {
+        property: "og:image:alt",
+        content: "Hộp bánh bông lan cam Tiệm Bánh Thanh – đặc sản Đà Nẵng",
+      },
       { property: "og:locale", content: "vi_VN" },
       { property: "og:locale:alternate", content: "en_US" },
       { property: "og:locale:alternate", content: "ko_KR" },

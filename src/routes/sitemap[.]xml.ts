@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-const BASE_URL = "https://banh-thanh-da-nang-delight.lovable.app";
+const BASE_URL = process.env.VITE_SITE_URL || "https://banh-thanh-da-nang-delight.lovable.app";
 
 const LOCALES = [
   { code: "vi", path: "/" },
@@ -17,9 +17,9 @@ export const Route = createFileRoute("/sitemap.xml")({
         const alternates = LOCALES.map(
           (l) =>
             `      <xhtml:link rel="alternate" hreflang="${l.code}" href="${BASE_URL}${l.path}"/>`,
-        ).concat(
-          `      <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/"/>`,
-        ).join("\n");
+        )
+          .concat(`      <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/"/>`)
+          .join("\n");
 
         const urls = LOCALES.map(
           (l) =>

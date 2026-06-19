@@ -3,19 +3,27 @@ import { Home } from "@/lib/site-content";
 import banhCamHop from "@/assets/banh-cam-hop.asset.json";
 import banhCam2 from "@/assets/banh-cam-2.asset.json";
 
-const SITE = "https://banh-thanh-da-nang-delight.lovable.app";
+const SITE =
+  typeof window !== "undefined"
+    ? window.location.origin
+    : import.meta.env.VITE_SITE_URL || "https://banh-thanh-da-nang-delight.lovable.app";
 const OG_IMAGE = `${SITE}${banhCamHop.url}`;
 const HERO_IMAGE = banhCam2.url;
 
 const TITLE = "Tiệm Bánh Thanh – 岘港特色烘焙店 · 香橙海绵蛋糕与伴手礼";
-const DESC = "岘港本地烘焙店 Tiệm Bánh Thanh – 松软香甜的香橙海绵蛋糕、虾肉糯米糍 (Bánh ít)、岘港牛肉干。精美礼盒包装，岘港市区送货上门。地址：K25/5 Lý Thường Kiệt, Hải Châu, 岘港。";
+const DESC =
+  "岘港本地烘焙店 Tiệm Bánh Thanh – 松软香甜的香橙海绵蛋糕、虾肉糯米糍 (Bánh ít)、岘港牛肉干。精美礼盒包装，岘港市区送货上门。地址：K25/5 Lý Thường Kiệt, Hải Châu, 岘港。";
 
 export const Route = createFileRoute("/zh")({
   head: () => ({
     meta: [
       { title: TITLE },
       { name: "description", content: DESC },
-      { name: "keywords", content: "岘港蛋糕, 岘港烘焙, 岘港伴手礼, 越南蛋糕, 越南手信, 香橙海绵蛋糕, 岘港牛肉干, 越南糯米糍, Tiem Banh Thanh" },
+      {
+        name: "keywords",
+        content:
+          "岘港蛋糕, 岘港烘焙, 岘港伴手礼, 越南蛋糕, 越南手信, 香橙海绵蛋糕, 岘港牛肉干, 越南糯米糍, Tiem Banh Thanh",
+      },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },

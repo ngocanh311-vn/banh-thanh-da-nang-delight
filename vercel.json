@@ -1,0 +1,29 @@
+{
+  "buildCommand": "bun run download-assets && bun run build",
+  "outputDirectory": ".output/public",
+  "publicSource": ".output/public",
+  "framework": "vite",
+  "nodeVersion": "20.x",
+  "installCommand": "bun install",
+  "env": {
+    "NODE_ENV": "production",
+    "VITE_SITE_URL": "@site-url"
+  },
+  "functions": {
+    "api/index": {
+      "runtime": "nodejs20.x",
+      "maxDuration": 60,
+      "memory": 1024
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml.server"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/api/index"
+    }
+  ]
+}

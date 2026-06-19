@@ -1,7 +1,6 @@
 {
   "buildCommand": "bun run download-assets && bun run build",
   "outputDirectory": ".output/public",
-  "publicSource": ".output/public",
   "framework": "vite",
   "nodeVersion": "20.x",
   "installCommand": "bun install",

@@ -1,7 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-const BASE_URL = process.env.VITE_SITE_URL || "https://banh-thanh-da-nang-delight.lovable.app";
+// Get site URL from environment or use default
+// On Vercel, you must set VITE_SITE_URL in Environment Variables
+const BASE_URL = (() => {
+  const siteUrl = process.env.VITE_SITE_URL;
+  if (siteUrl) return siteUrl;
+
+  // Fallback for development
+  if (process.env.NODE_ENV !== "production") {
+    return "http://localhost:8080";
+  }
+
+  // Fallback for production
+  return "https://banh-thanh-da-nang-delight.lovable.app";
+})();
 
 const LOCALES = [
   { code: "vi", path: "/" },

@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "tiệm bánh Thanh, bánh bông lan cam Đà Nẵng, đặc sản Đà Nẵng làm quà, bánh ít nhân tôm thịt, bò khô Đà Nẵng, đặt bánh Đà Nẵng",
+          "bánh bông lan cam Đà Nẵng, đặc sản Đà Nẵng làm quà, đặc sản làm quà Đà Nẵng, tiệm bánh Thanh, bánh bông lan cam, bánh bông lan cam Đà Nẵng ngon, mua bánh bông lan cam Đà Nẵng ở đâu, quà Đà Nẵng, quà biếu Đà Nẵng, bánh đặc sản Đà Nẵng, bánh ít nhân tôm thịt Đà Nẵng, bò khô Đà Nẵng, đặt bánh Đà Nẵng, giao bánh Đà Nẵng, tiệm bánh Đà Nẵng ngon, K25 Lý Thường Kiệt Đà Nẵng",
       },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

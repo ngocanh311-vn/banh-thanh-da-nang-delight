@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "bánh bông lan cam Đà Nẵng, đặc sản Đà Nẵng làm quà, đặc sản làm quà Đà Nẵng, tiệm bánh Thanh, bánh bông lan cam, bánh bông lan cam Đà Nẵng ngon, mua bánh bông lan cam Đà Nẵng ở đâu, quà Đà Nẵng, quà biếu Đà Nẵng, bánh đặc sản Đà Nẵng, bánh ít nhân tôm thịt Đà Nẵng, bò khô Đà Nẵng, đặt bánh Đà Nẵng, giao bánh Đà Nẵng, tiệm bánh Đà Nẵng ngon, K25 Lý Thường Kiệt Đà Nẵng",
+          "bánh cam Đà Nẵng, bánh gato cam Đà Nẵng, bánh gatocam Đà Nẵng, đặc sản Đà Nẵng, Đà Nẵng mua gì, Đà Nẵng mua gì làm quà, bánh bông lan cam Đà Nẵng, đặc sản Đà Nẵng làm quà, đặc sản làm quà Đà Nẵng, tiệm bánh Thanh, bánh bông lan cam, bánh bông lan cam Đà Nẵng ngon, mua bánh bông lan cam Đà Nẵng ở đâu, quà Đà Nẵng, quà biếu Đà Nẵng, bánh đặc sản Đà Nẵng, bánh ít nhân tôm thịt Đà Nẵng, bò khô Đà Nẵng, đặt bánh Đà Nẵng, giao bánh Đà Nẵng, tiệm bánh Đà Nẵng ngon, K25 Lý Thường Kiệt Đà Nẵng",
       },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
@@ -133,6 +133,22 @@ export const Route = createFileRoute("/")({
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Có. Tiệm Bánh Thanh giao hàng nội thành Đà Nẵng qua ShopeeFood, GrabFood và nhận đặt trước 1/2–1 ngày cho đơn số lượng lớn.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Đà Nẵng mua gì làm quà?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Đà Nẵng mua gì làm quà? Gợi ý top đầu là bánh cam (bánh gato cam) Tiệm Bánh Thanh – đặc sản Đà Nẵng mềm xốp thơm hương cam, kèm bánh ít nhân tôm thịt và bò khô sạch, đóng hộp sang trọng, dễ mang lên máy bay.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Bánh cam Đà Nẵng và bánh gato cam Đà Nẵng là gì?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Bánh cam Đà Nẵng (còn gọi là bánh gato cam / bánh gatocam Đà Nẵng) là bánh bông lan hương cam đặc trưng của Tiệm Bánh Thanh: cốt bánh vàng mịn, xốp mềm, thơm dịu vị cam tự nhiên – một trong những đặc sản Đà Nẵng làm quà được du khách ưa chuộng.",
               },
             },
           ],

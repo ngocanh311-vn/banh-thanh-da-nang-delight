@@ -135,6 +135,22 @@ export const Route = createFileRoute("/")({
                 text: "Có. Tiệm Bánh Thanh giao hàng nội thành Đà Nẵng qua ShopeeFood, GrabFood và nhận đặt trước 1/2–1 ngày cho đơn số lượng lớn.",
               },
             },
+            {
+              "@type": "Question",
+              name: "Đà Nẵng mua gì làm quà?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Đà Nẵng mua gì làm quà? Gợi ý top đầu là bánh cam (bánh gato cam) Tiệm Bánh Thanh – đặc sản Đà Nẵng mềm xốp thơm hương cam, kèm bánh ít nhân tôm thịt và bò khô sạch, đóng hộp sang trọng, dễ mang lên máy bay.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Bánh cam Đà Nẵng và bánh gato cam Đà Nẵng là gì?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Bánh cam Đà Nẵng (còn gọi là bánh gato cam / bánh gatocam Đà Nẵng) là bánh bông lan hương cam đặc trưng của Tiệm Bánh Thanh: cốt bánh vàng mịn, xốp mềm, thơm dịu vị cam tự nhiên – một trong những đặc sản Đà Nẵng làm quà được du khách ưa chuộng.",
+              },
+            },
           ],
         }),
       },

@@ -614,14 +614,14 @@ function Contact({ t }: { t: Tt }) {
             <div className="mt-4">
               <div className="flex items-center justify-between mb-2">
                 <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">{t.contact.mapTitle}</div>
-                <a href="https://maps.app.goo.gl/Yuw4kYQaMReYriFo7" target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">
+                <a href="https://maps.app.goo.gl/EXKmNoFnLFYueCAF7" target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline">
                   {t.contact.mapOpen}
                 </a>
               </div>
               <div className="rounded-2xl overflow-hidden border border-border">
                 <iframe
                   title="Tiệm Bánh Thanh map"
-                  src="https://www.google.com/maps?q=K25%2F5+L%C3%BD+Th%C6%B0%E1%BB%9Dng+Ki%E1%BB%87t%2C+H%E1%BA%A3i+Ch%C3%A2u%2C+%C4%90%C3%A0+N%E1%BA%B5ng&output=embed"
+                  src="https://www.google.com/maps?q=Ti%E1%BB%87m+B%C3%A1nh+Thanh,+25%2F5+L%C3%BD+Th%C6%B0%E1%BB%9Dng+Ki%E1%BB%87t,+%C4%90%C3%A0+N%E1%BA%B5ng&ll=16.0796246,108.2210813&output=embed"
                   width="100%"
                   height="180"
                   style={{ border: 0 }}

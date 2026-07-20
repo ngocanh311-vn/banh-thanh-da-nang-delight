@@ -72,7 +72,7 @@ export const Route = createFileRoute("/")({
             postalCode: "550000",
             addressCountry: "VN",
           },
-          geo: { "@type": "GeoCoordinates", latitude: 16.0678, longitude: 108.2208 },
+          geo: { "@type": "GeoCoordinates", latitude: 16.0796246, longitude: 108.2210813 },
           areaServed: [
             { "@type": "City", name: "Đà Nẵng" },
             { "@type": "AdministrativeArea", name: "Miền Trung Việt Nam" },

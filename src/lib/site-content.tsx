@@ -314,6 +314,7 @@ export function Home({ lang }: { lang: Lang }) {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header lang={lang} t={t} />
+      <MidAutumnBanner t={t} />
       <Hero lang={lang} t={t} />
       <TrustStrip t={t} />
       <Products lang={lang} t={t} />
@@ -327,6 +328,71 @@ export function Home({ lang }: { lang: Lang }) {
 }
 
 type Tt = Translation;
+
+const MID_AUTUMN_END = new Date("2026-09-27T17:00:00.000Z"); // hết 27/09/2026 giờ Việt Nam (UTC+7)
+
+function MidAutumnBanner({ t }: { t: Tt }) {
+  const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    if (Date.now() >= MID_AUTUMN_END.getTime()) setVisible(false);
+  }, []);
+  if (!visible) return null;
+  return (
+    <section aria-label={t.midAutumn.badge} className="relative overflow-hidden bg-ink text-cream">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-8 right-[6%] size-44 rounded-full bg-primary/20 blur-3xl" />
+        <div className="absolute top-5 right-[9%] size-14 rounded-full bg-primary/90 shadow-[0_0_40px_14px_rgba(217,119,6,0.35)]" />
+        <div className="absolute top-8 right-[17%] size-1.5 rounded-full bg-cream/70" />
+        <div className="absolute bottom-8 right-[26%] size-1 rounded-full bg-cream/50" />
+        <div className="absolute top-12 left-[16%] size-1 rounded-full bg-cream/40" />
+        <div className="absolute top-20 left-[38%] size-1 rounded-full bg-cream/30" />
+        <div className="absolute -bottom-24 -left-16 size-64 rounded-full bg-leaf/15 blur-3xl" />
+      </div>
+      <div className="relative mx-auto max-w-6xl px-5 py-8 md:py-10 flex flex-col md:flex-row md:items-center gap-6">
+        <div className="flex-1">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/15 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-primary">
+              🥮 {t.midAutumn.badge}
+            </span>
+            <span className="inline-flex items-center rounded-full border border-cream/25 bg-cream/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-cream/90">
+              ⏳ {t.midAutumn.deadline}
+            </span>
+          </div>
+          <h2 className="mt-3 font-display text-2xl md:text-3xl font-bold text-cream">
+            {t.midAutumn.title}
+          </h2>
+          <p className="mt-2 max-w-3xl text-sm md:text-base leading-relaxed text-cream/85">
+            {t.midAutumn.body}
+          </p>
+          <div className="mt-3 text-sm">
+            <p className="font-semibold text-cream">{t.midAutumn.supportTitle}</p>
+            <ul className="mt-1 space-y-0.5 text-cream/75">
+              <li className="flex gap-2"><span aria-hidden="true">–</span>{t.midAutumn.support1}</li>
+              <li className="flex gap-2"><span aria-hidden="true">–</span>{t.midAutumn.support2}</li>
+            </ul>
+          </div>
+          <p className="mt-3 max-w-3xl rounded-lg border border-accent/30 bg-accent/10 px-3 py-2 text-xs md:text-sm text-accent">
+            {t.midAutumn.note}
+          </p>
+        </div>
+        <div className="flex md:flex-col gap-2 shrink-0">
+          <a
+            href={`tel:${HOTLINES[0].tel}`}
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition shadow-warm"
+          >
+            <PhoneIcon className="size-4" /> {t.midAutumn.cta}
+          </a>
+          <a
+            href="#lien-he"
+            className="inline-flex items-center justify-center rounded-full border border-cream/30 px-5 py-2.5 text-sm font-semibold text-cream hover:bg-cream/10 transition"
+          >
+            {t.nav.contact}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function LangSwitcher({ lang }: { lang: Lang }) {
   const base = "px-2.5 py-1 text-xs font-bold uppercase tracking-wider transition";

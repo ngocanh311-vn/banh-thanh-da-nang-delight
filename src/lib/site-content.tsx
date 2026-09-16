@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import banhCamHop from "@/assets/banh-cam-hop.asset.json";
 import banhCam from "@/assets/banh-cam.asset.json";
@@ -48,6 +49,11 @@ type Translation = {
   footer: {
     tagline: string; contact: string; follow: string;
     address1: string; address2: string; rights: string; slogan: string;
+  };
+  midAutumn: {
+    badge: string; deadline: string; title: string; body: string;
+    supportTitle: string; support1: string; support2: string;
+    note: string; cta: string;
   };
 };
 
@@ -163,6 +169,17 @@ export const T: Record<Lang, Translation> = {
       rights: "Tiệm Bánh Thanh. Đã đăng ký kinh doanh tại TP. Đà Nẵng.",
       slogan: "Đặc sản Đà Nẵng làm quà",
     },
+    midAutumn: {
+      badge: "Trung Thu 2026",
+      deadline: "Nhận đơn đến hết 27/09/2026",
+      title: "Lại một mùa trăng nữa sắp đến",
+      body: "Tiệm Bánh Thanh bắt đầu nhận đơn đặt bánh BÔNG LAN CAM phục vụ khách hàng dịp Trung Thu năm nay dành cho công đoàn, doanh nghiệp, công ty, trường học...",
+      supportTitle: "Nếu bạn cần hỗ trợ thêm, hãy cho chúng tôi biết:",
+      support1: "Bạn muốn mua ăn gia đình hay liên hoan tập thể, đi biếu tặng hay làm từ thiện?",
+      support2: "Số lượng & địa điểm nhận hàng cụ thể là ở đâu?",
+      note: "Lưu ý: khách hàng nên đặt trước để tiệm chuẩn bị chu đáo – đặc biệt với các đơn số lượng lớn hoặc cần giao gấp.",
+      cta: "Gọi đặt: 0919.644.625",
+    },
   },
   en: {
     nav: { products: "Products", promise: "Promise", about: "About", contact: "Contact" },
@@ -275,6 +292,17 @@ export const T: Record<Lang, Translation> = {
       rights: "Tiệm Bánh Thanh. Registered business in Da Nang, Vietnam.",
       slogan: "Da Nang specialty · The perfect gift",
     },
+    midAutumn: {
+      badge: "Mid-Autumn Festival 2026",
+      deadline: "Orders open until Sep 27, 2026",
+      title: "Another full-moon season is coming",
+      body: "Tiệm Bánh Thanh is now taking orders for our signature ORANGE SPONGE CAKE for this Mid-Autumn Festival – perfect for unions, companies, businesses, schools and organizations.",
+      supportTitle: "Need help? Just let us know:",
+      support1: "Is it for family meals, an office party, gifting, or charity?",
+      support2: "What quantity do you need, and where should we deliver it?",
+      note: "Please order early so the bakery can prepare everything with care – especially for large orders or urgent deliveries.",
+      cta: "Call to order",
+    },
   },
 };
 
@@ -286,6 +314,7 @@ export function Home({ lang }: { lang: Lang }) {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header lang={lang} t={t} />
+      <MidAutumnBanner t={t} />
       <Hero lang={lang} t={t} />
       <TrustStrip t={t} />
       <Products lang={lang} t={t} />
@@ -299,6 +328,72 @@ export function Home({ lang }: { lang: Lang }) {
 }
 
 type Tt = Translation;
+
+const MID_AUTUMN_END = new Date("2026-09-27T17:00:00.000Z"); // hết 27/09/2026 giờ Việt Nam (UTC+7)
+
+function MidAutumnBanner({ t }: { t: Tt }) {
+  const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    if (Date.now() >= MID_AUTUMN_END.getTime()) setVisible(false);
+  }, []);
+  if (!visible) return null;
+  return (
+    <section aria-label={t.midAutumn.badge} className="relative overflow-hidden bg-ink text-cream">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-8 right-[6%] size-44 rounded-full bg-primary/20 blur-3xl" />
+        <div className="absolute top-5 right-[9%] size-14 rounded-full bg-primary/90 shadow-[0_0_40px_14px_rgba(217,119,6,0.35)]" />
+        <div className="absolute top-8 right-[17%] size-1.5 rounded-full bg-cream/70" />
+        <div className="absolute bottom-8 right-[26%] size-1 rounded-full bg-cream/50" />
+        <div className="absolute top-12 left-[16%] size-1 rounded-full bg-cream/40" />
+        <div className="absolute top-20 left-[38%] size-1 rounded-full bg-cream/30" />
+        <div className="absolute -bottom-24 -left-16 size-64 rounded-full bg-leaf/15 blur-3xl" />
+      </div>
+      <div className="relative mx-auto max-w-6xl px-5 py-8 md:py-10 flex flex-col md:flex-row md:items-center gap-6">
+        <div className="flex-1">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/15 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-primary">
+              <span aria-hidden="true" className="size-1.5 rounded-full bg-primary" />
+              {t.midAutumn.badge}
+            </span>
+            <span className="inline-flex items-center rounded-full border border-cream/25 bg-cream/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-cream/90">
+              ⏳ {t.midAutumn.deadline}
+            </span>
+          </div>
+          <h2 className="mt-3 font-display text-2xl md:text-3xl font-bold text-cream">
+            {t.midAutumn.title}
+          </h2>
+          <p className="mt-2 max-w-3xl text-sm md:text-base leading-relaxed text-cream/85">
+            {t.midAutumn.body}
+          </p>
+          <div className="mt-3 text-sm">
+            <p className="font-semibold text-cream">{t.midAutumn.supportTitle}</p>
+            <ul className="mt-1 space-y-0.5 text-cream/75">
+              <li className="flex gap-2"><span aria-hidden="true">–</span>{t.midAutumn.support1}</li>
+              <li className="flex gap-2"><span aria-hidden="true">–</span>{t.midAutumn.support2}</li>
+            </ul>
+          </div>
+          <p className="mt-3 max-w-3xl rounded-lg border border-accent/30 bg-accent/10 px-3 py-2 text-xs md:text-sm text-accent">
+            {t.midAutumn.note}
+          </p>
+        </div>
+        <div className="flex md:flex-col gap-2 shrink-0">
+          <a
+            href={`tel:${HOTLINES[0].tel}`}
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition shadow-warm"
+          >
+            <PhoneIcon className="size-4" /> {t.midAutumn.cta}
+          </a>
+          <a
+            href="#lien-he"
+            className="inline-flex items-center justify-center rounded-full border border-cream/30 px-5 py-2.5 text-sm font-semibold text-cream hover:bg-cream/10 transition"
+          >
+            {t.nav.contact}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function LangSwitcher({ lang }: { lang: Lang }) {
   const base = "px-2.5 py-1 text-xs font-bold uppercase tracking-wider transition";

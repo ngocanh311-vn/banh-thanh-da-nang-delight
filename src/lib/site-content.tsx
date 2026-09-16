@@ -50,6 +50,11 @@ type Translation = {
     tagline: string; contact: string; follow: string;
     address1: string; address2: string; rights: string; slogan: string;
   };
+  midAutumn: {
+    badge: string; deadline: string; title: string; body: string;
+    supportTitle: string; support1: string; support2: string;
+    note: string; cta: string;
+  };
 };
 
 export const T: Record<Lang, Translation> = {
@@ -164,6 +169,17 @@ export const T: Record<Lang, Translation> = {
       rights: "Tiệm Bánh Thanh. Đã đăng ký kinh doanh tại TP. Đà Nẵng.",
       slogan: "Đặc sản Đà Nẵng làm quà",
     },
+    midAutumn: {
+      badge: "Trung Thu 2026",
+      deadline: "Nhận đơn đến hết 27/09/2026",
+      title: "Lại một mùa trăng nữa sắp đến 🌕",
+      body: "Tiệm Bánh Thanh bắt đầu nhận đơn đặt bánh BÔNG LAN CAM phục vụ khách hàng dịp Trung Thu năm nay dành cho công đoàn, doanh nghiệp, công ty, trường học...",
+      supportTitle: "Nếu bạn cần hỗ trợ thêm, hãy cho chúng tôi biết:",
+      support1: "Bạn muốn mua ăn gia đình hay liên hoan tập thể, đi biếu tặng hay làm từ thiện?",
+      support2: "Số lượng & địa điểm nhận hàng cụ thể là ở đâu?",
+      note: "Lưu ý: khách hàng nên đặt trước để tiệm chuẩn bị chu đáo – đặc biệt với các đơn số lượng lớn hoặc cần giao gấp.",
+      cta: "Gọi đặt: 0919.644.625",
+    },
   },
   en: {
     nav: { products: "Products", promise: "Promise", about: "About", contact: "Contact" },
@@ -275,6 +291,17 @@ export const T: Record<Lang, Translation> = {
       address2: "Hai Chau, Da Nang",
       rights: "Tiệm Bánh Thanh. Registered business in Da Nang, Vietnam.",
       slogan: "Da Nang specialty · The perfect gift",
+    },
+    midAutumn: {
+      badge: "Mid-Autumn Festival 2026",
+      deadline: "Orders open until Sep 27, 2026",
+      title: "Another full-moon season is coming 🌕",
+      body: "Tiệm Bánh Thanh is now taking orders for our signature ORANGE SPONGE CAKE for this Mid-Autumn Festival – perfect for unions, companies, businesses, schools and organizations.",
+      supportTitle: "Need help? Just let us know:",
+      support1: "Is it for family meals, an office party, gifting, or charity?",
+      support2: "What quantity do you need, and where should we deliver it?",
+      note: "Please order early so the bakery can prepare everything with care – especially for large orders or urgent deliveries.",
+      cta: "Call to order",
     },
   },
 };

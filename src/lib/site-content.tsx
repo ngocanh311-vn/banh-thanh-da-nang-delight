@@ -172,7 +172,7 @@ export const T: Record<Lang, Translation> = {
     midAutumn: {
       badge: "Trung Thu 2026",
       deadline: "Nhận đơn đến hết 27/09/2026",
-      title: "Lại một mùa trăng nữa sắp đến 🌕",
+      title: "Lại một mùa trăng nữa sắp đến",
       body: "Tiệm Bánh Thanh bắt đầu nhận đơn đặt bánh BÔNG LAN CAM phục vụ khách hàng dịp Trung Thu năm nay dành cho công đoàn, doanh nghiệp, công ty, trường học...",
       supportTitle: "Nếu bạn cần hỗ trợ thêm, hãy cho chúng tôi biết:",
       support1: "Bạn muốn mua ăn gia đình hay liên hoan tập thể, đi biếu tặng hay làm từ thiện?",
@@ -295,7 +295,7 @@ export const T: Record<Lang, Translation> = {
     midAutumn: {
       badge: "Mid-Autumn Festival 2026",
       deadline: "Orders open until Sep 27, 2026",
-      title: "Another full-moon season is coming 🌕",
+      title: "Another full-moon season is coming",
       body: "Tiệm Bánh Thanh is now taking orders for our signature ORANGE SPONGE CAKE for this Mid-Autumn Festival – perfect for unions, companies, businesses, schools and organizations.",
       supportTitle: "Need help? Just let us know:",
       support1: "Is it for family meals, an office party, gifting, or charity?",

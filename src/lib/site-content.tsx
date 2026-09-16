@@ -352,7 +352,8 @@ function MidAutumnBanner({ t }: { t: Tt }) {
         <div className="flex-1">
           <div className="flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/15 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-primary">
-              🥮 {t.midAutumn.badge}
+              <span aria-hidden="true" className="size-1.5 rounded-full bg-primary" />
+              {t.midAutumn.badge}
             </span>
             <span className="inline-flex items-center rounded-full border border-cream/25 bg-cream/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-cream/90">
               ⏳ {t.midAutumn.deadline}
